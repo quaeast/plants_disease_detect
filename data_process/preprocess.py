@@ -32,3 +32,7 @@ test_dict = {'labels': labels, 'photos': npy_photos}
 
 np.save('../data/test_set.npy', np.array([test_dict]))
 
+
+def read_test_set():
+    return np.load('../data/test_set.npy', allow_pickle=True)[0]
+

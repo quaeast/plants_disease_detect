@@ -34,7 +34,7 @@ class Vgg16(object):
 
         self.fc6 = self.get_relu_layer(self.max_pool5_plain, 4096)
         self.fc7 = self.get_relu_layer(self.fc6, 4096)
-        self.fc8 = self.get_relu_layer(self.fc7, 1000)
+        self.fc8 = self.get_relu_layer(self.fc7, 15)
 
     def get_max_pool(self, x):
         return tf.nn.max_pool(value=x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
